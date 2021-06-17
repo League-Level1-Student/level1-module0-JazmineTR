@@ -18,7 +18,7 @@ int x;
 void setup() {
 
   //Set your canvas size
-  
+  size(500,500);
   
   //If you are using an image for the bucket, load it and resize it here.
   // A bucket image -  bucket.png - has been provided if you want to use it.
@@ -27,13 +27,16 @@ void setup() {
 
 // The draw method runs continuously (in a loop) until the program ends
 void draw() {
+ 
   // Set a background color
-  
-  
+  background(130,125,0);
+  int y= 50;
   // Draw a raindrop (ellipse) at the top of the screen
+  for(int i = 1;i<30;i++){
+   
+  ellipse(100,y+2,25, 40);
   
-  
-  
+  }
   // Make the rain fall down the screen.
   // Hint: make a variable for the raindrop's Y position and change it after you
   // draw the raindrop

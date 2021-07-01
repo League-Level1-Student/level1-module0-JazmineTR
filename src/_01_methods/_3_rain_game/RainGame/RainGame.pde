@@ -8,7 +8,7 @@
 
 
 int score = 0;
-int bucketWidth = 50;
+int bucketWidth = 100;
 int bucketHeight;
 PImage bucket;
 int y= 50;
@@ -34,22 +34,20 @@ void draw() {
   // Draw a raindrop (ellipse) at the top of the screen
     
     background(130,125,0);
-    for(int i=1;i<10;i++){
-  ellipse(x,y,s, s);
- y= y+5;
-   if(height < s) {  
-        x = (int)random(0,450);
-        y = (int) random(height);
-        }
-    
-     ellipse(x+100,y,s, s);
-      checkCatch(x);  
-       
-    }
-
- 
-
    
+  ellipse(x,y,s, s);
+ y=y+3;
+  
+  
+   if(height < y) {  
+     checkCatch(x);
+        x = (int)random(0,450);
+        y = 0; 
+        }
+ 
+    
+    
+     
   // Make the rain fall down the screen.
   // Hint: make a variable for the raindrop's Y position and change it after you
   // draw the raindrop
@@ -61,7 +59,7 @@ void draw() {
 
        int randomNumber = (int) random(width);
        
-       rect(mouseX,450,100,200);
+       rect(mouseX,450,bucketWidth,200);
       
  
   // Each new drop should start at a random position (X position) at the top. 

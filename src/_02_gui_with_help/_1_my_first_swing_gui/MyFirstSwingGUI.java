@@ -16,8 +16,17 @@ public class MyFirstSwingGUI {
 	public void run() {
 
 		// 1. Create and initialize an object of the JFrame class
-
-		// 2. Set your JFrame object to be visible
+JFrame frame = new JFrame("Test");
+frame.setVisible(true);
+frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+JPanel panel = new JPanel();
+JLabel label = new JLabel("Good Afternoon!");
+frame.add(panel);
+panel.add(label);
+frame.pack();
+label.setIcon(loadImage());
+frame.pack();
+// 2. Set your JFrame object to be visible
 
 		// 3. Run your program. Do you see your window? It's probably very
 		// small.

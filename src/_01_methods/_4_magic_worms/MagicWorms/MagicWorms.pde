@@ -10,7 +10,7 @@ int y;
 void setup() {
 
   //Set your canvas size
-size(800,650);
+size(1000,1000);
   //Set a background color  
 background(200, 0,25);
 }
@@ -19,15 +19,16 @@ background(200, 0,25);
 void draw() {
 
   // STEP 1.
-  for(int i=1; i<300;i++){
+  makeMagical();
+for(int i=1; i<200;i++){
     fill(224,231,34);
-    ellipse(x,y,20,20); 
-    x=x+20;
-    y=y+16;
-    
-      x = (int)random(0,800);
-    
+    ellipse(x,y,20,20);
+    x = (int)getWormX(i);
+    y = (int)getWormY(i);
   }
+   x = (int)random(1000);
+    y = (int)random(1000);
+    
   // Use a for loop to draw 300 small ellipses in a diagonal line across the canvas.
   // Make them a bright color.
   // RUN THE PROGRAM TO CHECK IT (see the recipe for the expected outcome).

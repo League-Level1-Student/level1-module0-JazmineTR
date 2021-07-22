@@ -14,8 +14,10 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.swing.Icon;
 import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 
 public class DrumKit implements MouseListener {
 	static boolean canPlaySounds = true; // Set this to false if your computer cannot play sounds
@@ -24,14 +26,19 @@ public class DrumKit implements MouseListener {
 	public void run() {
 
 		//  Make a JFrame variable and initialize it using "new JFrame()"
-
+JFrame drum = new JFrame("Drum Kit");
+drum.setVisible(true);
+drum.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		//  Make the frame visible and
 		// set its default close operation to JFrame.EXIT_ON_CLOSE
 
 		//  Set the title of the frame
-
+JPanel panel = new JPanel();
+drum.add(panel);
 		//  Make a JPanel variable and initialize it using "new JPanel().
-
+String snare = "snare.jpg";
+drumLabel=(createLabelImage(snare));
+panel.add(drumLabel);
 		//  Add the panel to the frame. (The panel is invisible.)
 
 		//  Use the image of a drum provided ("snare.jpg") or

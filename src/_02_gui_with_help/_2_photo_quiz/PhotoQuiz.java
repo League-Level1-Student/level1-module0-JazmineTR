@@ -28,23 +28,23 @@ public class PhotoQuiz {
 		// 1. find an image on the internet, and put its URL in a String
 		// variable (from your browser, right click on the image, and select
 		// “Copy Image Address” )
-String lady = "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/19/Tamayo_anime.png/revision/latest?cb=20191130193827";
-		// 2. create a variable of type "Component" that will hold your imageComponent
-Component comp = null;
+String lady = "https://static.wikia.nocookie.net/kimetsu-no-yaiba/images/1/19/Tamayo_anime.png";
+// 2. create a variable of type "Component" that will hold your imageComponent
+Component comp;
 		// 3. use the "createImage()" method below to initialize your Component
-createImage(lady);
+comp = createImage(lady);
 		// 4. add the image to the quiz window
-quizWindow.add(lady, comp);
+quizWindow.add(comp);
 		// 5. call the pack() method on the quiz window
 quizWindow.pack();
 		// 6. ask a question that relates to the image
 String slayer = JOptionPane.showInputDialog(comp,"Is this character from Demon Slayer?");
 		// 7. print "CORRECT" if the user gave the right answer
 if(slayer.equalsIgnoreCase("yes")) {
-	JOptionPane.showMessageDialog(comp, "CORRECT!");
+	JOptionPane.showMessageDialog(null, "CORRECT!");
 }
 else {
-	JOptionPane.showMessageDialog(comp, "INCORRECT");
+	JOptionPane.showMessageDialog(null, "INCORRECT");
 }
 		// 8. print "INCORRECT" if the answer is wrong
 quizWindow.remove(comp);
@@ -53,13 +53,19 @@ quizWindow.remove(comp);
 String airi = "https://i.pinimg.com/originals/d2/66/02/d266027fb3dafad1ba1f4588e48fd175.jpg";
 		// 10. find another image and create it (might take more than one line
 		// of code)
-createImage(airi);
+comp = createImage(airi);
 		// 11. add the second image to the quiz window
-quizWindow.add(airi,comp);
+quizWindow.add(comp);
 		// 12. pack the quiz window
 quizWindow.pack();
 		// 13. ask another question
-
+String erased = JOptionPane.showInputDialog(comp,"Is she from Erased?");
+if(erased.equalsIgnoreCase("yes")) {
+	JOptionPane.showMessageDialog(null, "CORRECT!");
+}
+else {
+	JOptionPane.showMessageDialog(null, "INCORRECT");
+}
 		// 14+ check answer, say if correct or incorrect, etc.
 
 	}

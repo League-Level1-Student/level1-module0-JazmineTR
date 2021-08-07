@@ -45,7 +45,7 @@ String cymbal = "cymbal.jpg";
 drumLabel=createLabelImage(cymbal);
 panel.add(drumLabel);
 drum.pack();
-
+drumLabel.addMouseListener(null);
 
 
 		//  Add the panel to the frame. (The panel is invisible.)
@@ -77,9 +77,8 @@ drum.pack();
 }
 
 	public void mouseClicked(MouseEvent e) {
-	
-				
-		// Print "mouse clicked" to the console. Run your program and watch
+	 System.out.println("mouse clicked");
+		// Print "mouse clicked to the console. Run your program and watch
 		// the console to see when this is printed.
 
 		JLabel labelClicked = (JLabel) e.getSource(); // This line gets the label

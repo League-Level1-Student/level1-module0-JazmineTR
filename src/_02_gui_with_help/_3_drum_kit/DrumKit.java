@@ -41,13 +41,8 @@ String snare = "snare.jpg";
 drumLabel=createLabelImage(snare);
 panel.add(drumLabel);
 drum.pack();
-String cymbal = "cymbal.jpg";
-drumLabel=createLabelImage(cymbal);
-panel.add(drumLabel);
-drum.pack();
-drumLabel.addMouseListener(null);
-
-
+MouseListener mouse = new MouseListener();
+	
 		//  Add the panel to the frame. (The panel is invisible.)
 
 		//  Use the image of a drum provided ("snare.jpg") or
@@ -57,7 +52,7 @@ drumLabel.addMouseListener(null);
 		//  Put the name of the drum image file in a String variable.
 
 		//  Edit the next line to use your String variable
-		// drumLabel = createLabelImage(drumImageString);
+		// drumLabel = createLabelIemage(drumImageString);
 
 		//  Add the label to the panel
 
@@ -74,8 +69,8 @@ drumLabel.addMouseListener(null);
 		//  You will need a different sound to go with this image.
 		//  Remember to add this MouseListener to it. Run the program.
 
-}
-
+	}
+	
 	public void mouseClicked(MouseEvent e) {
 	 System.out.println("mouse clicked");
 		// Print "mouse clicked to the console. Run your program and watch
@@ -95,22 +90,20 @@ drumLabel.addMouseListener(null);
 
 		//  If the user clicks on the drumImage...use the playSound method to play the drum sound.
 		//  Test to see if it works before moving on.
-
 	}
-
-	private JLabel createLabelImage(String fileName) {
-		JLabel imageLabel = new JLabel();
-		URL imageURL = getClass().getResource(fileName);
-		if (imageURL == null) {
-			imageLabel.setText("Could not find image " + fileName);
-		} else {
-			Icon icon = new ImageIcon(imageURL);
-			imageLabel.setIcon(icon);
-		}
-		return imageLabel;
-	}
-
-
+      
+        private JLabel createLabelImage(String fileName) {
+        	JLabel imageLabel = new JLabel();
+        	URL imageURL = getClass().getResource(fileName);
+        	if (imageURL == null) {
+        		imageLabel.setText("Could not find image " + fileName);
+        	} else {
+        		Icon icon = new ImageIcon(imageURL);
+        		imageLabel.setIcon(icon);
+        	}
+        	return imageLabel;
+        
+        }
 	public static synchronized void playSound(String fileName) {
 		if (canPlaySounds) {
         	// Note: use .wav files  
@@ -155,5 +148,6 @@ drumLabel.addMouseListener(null);
 		// TODO Auto-generated method stub
 
 	}
-
 }
+	
+

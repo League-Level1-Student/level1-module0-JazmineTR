@@ -64,12 +64,8 @@ frame.setTitle("Demanding Buttons");
 		// Set the text of the leftButton to "Click Me!"
 		// Set the PREFERRED size of the leftButton to SMALL
 
-		if(buttonPressed.equals(rightButton)) {
-			leftButton.setText("No, click me!");
-			leftButton.setPreferredSize(BIG);
-			rightButton.setText("Click Me");
-			rightButton.setPreferredSize(SMALL);
-		}
+		
+
 		
 		
 		/* If the buttonPressed was the rightButton, do the opposite. */

@@ -21,7 +21,7 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class DrumKit implements MouseListener {
-	static boolean canPlaySounds = true; // Set this to false if your computer cannot play sounds
+	static boolean canPlaySounds = false; // Set this to false if your computer cannot play sounds
 	JLabel drumLabel;
 
 	public void run() {
@@ -41,7 +41,12 @@ String snare = "snare.jpg";
 drumLabel=createLabelImage(snare);
 panel.add(drumLabel);
 drum.pack();
-MouseListener mouse = new MouseListener();
+drumLabel.addMouseListener(this);
+String cymbal = "cymbal.jpg";
+drumLabel=createLabelImage(cymbal);
+panel.add(drumLabel);
+drum.pack();
+drumLabel.addMouseListener(this);
 	
 		//  Add the panel to the frame. (The panel is invisible.)
 
@@ -72,7 +77,7 @@ MouseListener mouse = new MouseListener();
 	}
 	
 	public void mouseClicked(MouseEvent e) {
-	 System.out.println("mouse clicked");
+		System.out.println("mouse clicked");
 		// Print "mouse clicked to the console. Run your program and watch
 		// the console to see when this is printed.
 
@@ -81,8 +86,9 @@ MouseListener mouse = new MouseListener();
 										// clicked on
         JPanel panel = new JPanel(new GridLayout());
   
-   
-     
+
+  
+  
 		// You can use the drum sound provided ("drum.wav") or	
 		// download another drum sound (.wav) and drop it into the Drum Kit package.
 		// You can find sounds on freesound.org, and to download from there, you must log in 

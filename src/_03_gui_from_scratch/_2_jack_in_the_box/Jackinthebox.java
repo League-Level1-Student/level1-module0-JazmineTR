@@ -27,6 +27,7 @@ public class Jackinthebox implements ActionListener{
 	public void actionPerformed(ActionEvent arg0) {
 		// TODO Auto-generated method
 		
+		
 			clicked++;
 			
 System.out.println(clicked);

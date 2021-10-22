@@ -13,7 +13,9 @@ public class SoundEffects implements ActionListener {
 		JPanel viola = new JPanel();
 		frame.setVisible(true);
 		  JButton button = new JButton("Roar");
+		  JButton bark = new JButton("Bark");
 		    viola.add(button);
+		    viola.add(bark);
 		    frame.add(viola);
 		    frame.pack();
 		    button.addActionListener(this);
@@ -22,6 +24,7 @@ public class SoundEffects implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
+		
 		
 	}
 }

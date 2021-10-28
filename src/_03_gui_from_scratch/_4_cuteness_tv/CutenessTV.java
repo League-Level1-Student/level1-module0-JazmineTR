@@ -6,6 +6,7 @@ import java.net.URI;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
 public class CutenessTV implements ActionListener {
@@ -30,13 +31,13 @@ public class CutenessTV implements ActionListener {
 	public void actionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		if(e.getSource()== button) {
-			
+			showDucks();
 		}
 		if(e.getSource()== bark) {
-			
+			showFrog();
 		}
 		if(e.getSource()== ribbit) {
-			
+			showFluffyUnicorns();
 		}
 	}
 	void playVideo(String videoID) {
